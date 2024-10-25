@@ -503,9 +503,9 @@
 
 (add-hook 'org-after-todo-statistics-hook #'org-summary-todo)
 
-(setq calendar-latitude 35.99)
-(setq calendar-longitude -78.89)
-(setq calendar-location-name "Durham, NC")
+(setq calendar-latitude 37.44)
+(setq calendar-longitude 122.14)
+(setq calendar-location-name "Palo Alto, CA")
 ;; (setq calendar-latitude 37.8715)
 ;; (setq calendar-longitude -122.2730)
 ;; (setq calendar-location-name "Berkeley, CA")

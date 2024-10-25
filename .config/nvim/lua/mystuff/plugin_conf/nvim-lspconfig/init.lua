@@ -13,7 +13,7 @@ local servers = {
 	--"jsonls",
 	-- "jdtls",
 	"svelte",
-	-- "typos_lsp",
+	"typos_lsp",
 	"markdown_oxide",
 	"vuels",
 	"cssls",
@@ -31,7 +31,7 @@ for _, lsp in ipairs(servers) do
 			capabilities = capabilities,
 			on_attach = on_attach,
 			flags = { debounce_text_changes = 150 },
-            filetypes = { "markdown" },
+			filetypes = { "markdown" },
 		})
 	else
 		lspconfig[lsp].setup({
@@ -69,12 +69,8 @@ local luaLspConfig = {
 	},
 }
 
---local luadev = require("lua-dev").setup({lspconfig=luaLspConfig})
-require("neodev").setup({
-	library = { plugins = { "nvim-dap-ui" }, types = true },
-})
-
--- require'lspconfig'.sumneko_lua.setup(luaLspConfig)
+-- local luadev = require("lua-dev").setup({lspconfig=luaLspConfig})
+-- require("lazydev").setup({})
 
 lspconfig.lua_ls.setup({
 	capabilities = capabilities,

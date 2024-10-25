@@ -94,6 +94,8 @@ M.handle_passage_ref = function(passage_ref)
 			local cursor = vim.api.nvim_win_get_cursor(0)
 			local results_in_line = vim.fn.substitute(result, "\n", " ", "g")
 			local passage_text = BreakLines(results_in_line, 80, "> ")
+                            passage_text = "\n" .. passage_text
+
 			vim.api.nvim_buf_set_lines(bufnr, cursor[1], cursor[1] + 1, false, vim.split(passage_text, "\n") )
 			-- vim.api.nvim_win_set_cursor(0, {cursor[1], cursor[2] + #link})
 		elseif res == "biblehub" then
