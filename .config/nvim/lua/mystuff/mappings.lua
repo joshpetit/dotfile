@@ -452,3 +452,5 @@ vim.api.nvim_set_keymap(
 )
 -- Search for the notes matching the current visual selection.
 vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>n.", "<Cmd>Oil .<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>nd", "<Cmd>Oil<CR>", opts)
