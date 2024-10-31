@@ -4,6 +4,10 @@ require("obsidian").setup({
 			name = "wiki",
 			path = "~/sync/wiki",
 		},
+		{
+			name = "Controversia Prophetica",
+			path = "~/sync/obsidian/Controversia Prophetica/",
+		},
 	},
 	follow_url_func = function(url)
 		vim.fn.setreg("+", url)
